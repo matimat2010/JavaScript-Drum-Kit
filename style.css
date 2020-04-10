@@ -1,6 +1,12 @@
 html {
   font-size: 10px;
-  background: url(https://i.imgur.com/b9r5sEL.jpg) bottom center;
+  /* background: url(https://i.imgur.com/b9r5sEL.jpg) bottom center;
+  background-size: cover; */
+
+  background: url(images/wu_tang_clan___w___by_tangclock.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
@@ -9,11 +15,18 @@ body,html {
   padding: 0;
   font-family: sans-serif;
 }
+body{
+
+  font-size: 10px;
+  background: url(https://i.imgur.com/b9r5sEL.jpg) bottom center;
+  background-size: cover;
+
+}
 
 .keys {
   display: flex;
   flex: 1;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   align-items: center;
   justify-content: center;
 }
@@ -28,9 +41,23 @@ body,html {
   width: 10rem;
   text-align: center;
   color: white;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.795);
   text-shadow: 0 0 .5rem black;
 }
+
+.machine{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -210px;
+  /* width: 100px;
+  height: 100px; */
+  background-color: #ffc600;
+  /* background: url(/Users/matthewalvarado/Desktop/JavaScript-Drum-Kit/wutang_clan_logo.jpg) center;  */
+  opacity: 0.99;
+}
+
 
 .playing {
   transform: scale(1.1);
