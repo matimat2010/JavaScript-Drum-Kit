@@ -9,43 +9,43 @@
 
   <div class="machine">
   <div class="keys">
-    <div data-key="65" class="key">
+    <div data-key="65" class="key" onclick="playSample('boom')">
       <kbd>A</kbd>
       <span class="sound" >Boom</span>
     </div>
-    <div data-key="83" class="key">
+    <div data-key="83" class="key" onclick="playSample('solidKick')">
       <kbd>S</kbd>
       <span class="sound">Solid Kick</span>
     </div>
-       <div data-key="68" class="key">
+       <div data-key="68" class="key" onclick="playSample('subKick')">
       <kbd>D</kbd>
       <span class="sound">Sub Kick</span>
     </div></div>
 
     <div class="keys">
-    <div data-key="70" class="key">
+    <div data-key="70" class="key" onclick="playSample('bap')">
       <kbd>F</kbd>
       <span class="sound">Bap</span>
     </div>
-    <div data-key="71" class="key">
+    <div data-key="71" class="key" onclick="playSample('clap')">
       <kbd>G</kbd>
       <span class="sound">Clap</span>
     </div>
-    <div data-key="72" class="key">
+    <div data-key="72" class="key" onclick="playSample('bell')">
       <kbd>H</kbd>
       <span class="sound">Bell</span>
     </div></div>
 
     <div class="keys">
-    <div data-key="74" class="key">
+    <div data-key="74" class="key" onclick="playSample('hat')">
       <kbd>J</kbd>
       <span class="sound">Hat</span>
     </div>
-    <div data-key="75" class="key">
+    <div data-key="75" class="key" onclick="playSample('sitar')">
       <kbd>K</kbd>
       <span class="sound">Sitar</span>
     </div>
-    <div data-key="76" class="key">
+    <div data-key="76" class="key" onclick="playSample('scene')">
       <kbd>L</kbd>
       <span class="sound">Scene</span>
     </div>
@@ -53,15 +53,15 @@
 </div>
 
 
-  <audio data-key="65" src="sounds/Boom_1.wav"></audio>
-  <audio data-key="83" src="sounds/SolidKick.wav"></audio>
-  <audio data-key="68" src="sounds/subKick.wav"></audio>
-  <audio data-key="70" src="sounds/Bap.wav"></audio>
-  <audio data-key="71" src="sounds/clapWu.wav"></audio>
-  <audio data-key="72" src="sounds/Bell.wav"></audio>
-  <audio data-key="74" src="sounds/HatJazz.wav"></audio>
-  <audio data-key="75" src="sounds/Sitar.wav"></audio>
-  <audio data-key="76" src="sounds/Scene.wav"></audio>
+  <audio data-key="65" src="sounds/Boom_1.wav" id="boom"></audio>
+  <audio data-key="83" src="sounds/SolidKick.wav" id="solidKick"></audio>
+  <audio data-key="68" src="sounds/subKick.wav" id="subKick"></audio>
+  <audio data-key="70" src="sounds/Bap.wav" id="bap"></audio>
+  <audio data-key="71" src="sounds/clapWu.wav" id="clap"></audio>
+  <audio data-key="72" src="sounds/Bell.wav" id="bell"></audio>
+  <audio data-key="74" src="sounds/HatJazz.wav" id="hat"></audio>
+  <audio data-key="75" src="sounds/Sitar.wav" id="sitar"></audio>
+  <audio data-key="76" src="sounds/Scene.wav" id="scene"></audio>
 
 <script>
 
@@ -76,18 +76,6 @@ key.classList.add('playing');
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 function removeTransition(e){
   if(e.propertyName !== 'transform') return; 
   this.classList.remove('playing');
@@ -97,11 +85,16 @@ const keys = document.querySelectorAll('.key');
 keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 
 
-
 window.addEventListener('keydown', playSound);
 
 
-
+function playSample(samplename){
+  var sample = document.getElementById(samplename);
+  if(!sample) return; //stop the function from running all together
+sample.currentTime=0; //rewind to start
+sample.play();
+//key.classList.add('playing');
+}
 
 
 
