@@ -11,7 +11,7 @@
   <div class="keys">
     <div data-key="65" class="key">
       <kbd>A</kbd>
-      <span class="sound">Boom</span>
+      <span class="sound" >Boom</span>
     </div>
     <div data-key="83" class="key">
       <kbd>S</kbd>
@@ -76,6 +76,18 @@ key.classList.add('playing');
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 function removeTransition(e){
   if(e.propertyName !== 'transform') return; 
   this.classList.remove('playing');
@@ -87,7 +99,11 @@ keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 
 
 window.addEventListener('keydown', playSound);
-window.addEventListener('click', playSound);
+
+
+
+
+
 
 </script>
 
