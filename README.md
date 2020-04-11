@@ -1,7 +1,7 @@
 # JavaScript-Drum-Kit
 WuTang Clan Drum Kit
 
-Demo at https://matimat2010.github.io/JavaScript-Drum-Kit/
+Demo at https://matimat2010.github.io/WuTang-Drum-Kit/
 
 *Currently works on desktop / laptop
 *Not optimized for mobile as of 4/11/20
