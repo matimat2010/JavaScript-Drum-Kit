@@ -6,12 +6,15 @@ Demo at https://matimat2010.github.io/WuTang-Drum-Kit/
 *Currently works on desktop / laptop
 *Not optimized for mobile as of 4/11/20
 
+Instructions for Desktop: Press the corresponding key on your keyboard to trigger the sound:
+
+Instructions for Mobile: Press button with finger to trigger sound. 
 
 
     Overview: 
     This program was started by following the JavaScript Drum Kit tutorial at https://courses.wesbos.com/account/access/5e8feaee9edbdf363811cc01/view/194130650
     
-    XDoneX I want to be able to modify the program so that the Drum Kit's buttons are centered intheir layout as opposed to in a straight line. 
+    XDoneX I want to be able to modify the program so that the Drum Kit's buttons are centered in their layout as opposed to in a straight line. 
 
     XDoneX I want to swap the provided samples for samples from Wu Tang Clan albums.
     samples from https://soundpacks.com/free-sound-packs/wu-tang-drum-kit/ 
